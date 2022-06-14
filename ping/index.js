@@ -8,9 +8,9 @@ app.get("/", (req, res) => {
   res.send("ping");
 });
 
-// app.get("/pong", async (req, res) => {
-//   const data = await axios.get("http://pong:3000/");
-//   res.send(data.data);
-// });
+app.get("/pong", async (req, res) => {
+  const data = await axios.get("http://pong:3000/");
+  res.send(data.data);
+});
 
-app.listen(PORT, `PING is listening on ${PORT}`);
+app.listen(PORT, () => console.log(`PING is listening on ${PORT}`));
