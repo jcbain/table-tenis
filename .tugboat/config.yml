@@ -5,5 +5,4 @@ services:
     expose: 3000
   pong:
     image: tugboatqa/node:14
-    default: true
     expose: 3000
