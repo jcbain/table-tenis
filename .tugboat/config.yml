@@ -11,6 +11,7 @@ services:
   pong:
     image: tugboatqa/node:14
     expose: 3000
+    checkout: true
     commands:
       start:
         - node ${TUGBOAT_ROOT}/pong &
