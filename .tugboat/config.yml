@@ -5,14 +5,14 @@ services:
     expose: 3000
     commands:
       start:
-        - node ${DOCROOT}/ping &
+        - node ${TUGBOAT_ROOT}/ping &
       build:
-        - npm i ${DOCROOT}/ping
+        - npm i ${TUGBOAT_ROOT}/ping
   pong:
     image: tugboatqa/node:14
     expose: 3000
     commands:
       start:
-        - node ${DOCROOT}/pong &
+        - node ${TUGBOAT_ROOT}/pong &
       build:
-        - npm i ${DOCROOT}/pong
+        - npm i ${TUGBOAT_ROOT}/pong
