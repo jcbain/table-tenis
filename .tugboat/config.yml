@@ -3,6 +3,16 @@ services:
     image: tugboatqa/node:14
     default: true
     expose: 3000
+    commands:
+      start:
+        - node ${DOCROOT}/ping &
+      build:
+        - npm i ${DOCROOT}/ping
   pong:
     image: tugboatqa/node:14
     expose: 3000
+    commands:
+      start:
+        - node ${DOCROOT}/pong &
+      build:
+        - npm i ${DOCROOT}/pong
