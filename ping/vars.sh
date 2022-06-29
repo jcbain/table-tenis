@@ -1,0 +1,1 @@
+SOMEURL=`curl -H "Authorization: Token $TUGBOAT_DEFAULT_SERVICE_TOKEN" https://api.tugboat.qa/v3/previews/$TUGBOAT_PREVIEW_ID/services | jq '.[] | select(.name == "pong") | .urls[0]'`
