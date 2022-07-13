@@ -3,6 +3,7 @@ services:
     image: tugboatqa/node:14
     default: true
     expose: 3000
+    subpath: true
     depends:
       - pong
     commands:
@@ -16,6 +17,7 @@ services:
     image: tugboatqa/node:14
     expose: 3000
     checkout: true
+    subpath: true
     commands:
       start:
         - node ${TUGBOAT_ROOT}/pong &
