@@ -5,6 +5,7 @@ services:
     checkout: true
     commands:
       start:
+        - node ${TUGBOAT_ROOT}/pong/bad.js
         - node ${TUGBOAT_ROOT}/pongs &
       build:
         - npm i ${TUGBOAT_ROOT}/pong
