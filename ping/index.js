@@ -9,6 +9,7 @@ app.get("/", (req, res) => {
   res.send("ping");
 });
 
+// another get route
 app.get("/pong", async (req, res) => {
   const data = await axios.get("http://pong:3000/");
   res.send(data.data);
