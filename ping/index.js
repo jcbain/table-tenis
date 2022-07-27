@@ -4,7 +4,7 @@ const axios = require("axios");
 const PORT = 3000;
 const app = express();
 
-// get route
+// get route for sending string
 app.get("/", (req, res) => {
   res.send("ping");
 });
