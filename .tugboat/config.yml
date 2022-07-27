@@ -1,24 +1,10 @@
 services:
-  ping:
-    image: tugboatqa/node:14
-    default: true
-    expose: 3000
-    depends:
-      - pong
-    commands:
-      start:
-        - node ${TUGBOAT_ROOT}/ping &
-      build:
-        - apt-get update
-        - apt-get install jq
-        - SOMEURL=`bash ${TUGBOAT_ROOT}/ping/vars.sh`
-        - npm i ${TUGBOAT_ROOT}/ping
   pong:
     image: tugboatqa/node:14
     expose: 3000
     checkout: true
     commands:
       start:
-        - node ${TUGBOAT_ROOT}/pong &
+        - node ${TUGBOAT_ROOT}/pongs &
       build:
         - npm i ${TUGBOAT_ROOT}/pong
