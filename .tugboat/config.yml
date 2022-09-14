@@ -14,8 +14,7 @@ services:
         - apt-get install jq
         - npm i ${TUGBOAT_ROOT}/ping
     urls:
-      - /ping
-      - /pong
+      - /main-acabnnqwz4zu6f9ytmpzx8zqb3rp3n5y
   pong:
     image: tugboatqa/node:14
     expose: 3000
