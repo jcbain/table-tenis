@@ -13,6 +13,8 @@ services:
         - apt-get update
         - apt-get install jq
         - npm i ${TUGBOAT_ROOT}/ping
+    urls:
+      - /
   pong:
     image: tugboatqa/node:14
     expose: 3000
@@ -23,4 +25,3 @@ services:
         - node ${TUGBOAT_ROOT}/pong &
       build:
         - npm i ${TUGBOAT_ROOT}/pong
-
