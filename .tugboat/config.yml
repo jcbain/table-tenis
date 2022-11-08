@@ -17,6 +17,8 @@ services:
         - npm i ${TUGBOAT_ROOT}/ping
     urls:
       - /main-acabnnqwz4zu6f9ytmpzx8zqb3rp3n5y
+    envvars:
+      - PATH="${TUGBOAT_ROOT}/hello:$PATH"
   pong:
     image: tugboatqa/node:14
     expose: 3000
